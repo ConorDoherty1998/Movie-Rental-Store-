@@ -56,3 +56,4 @@ C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalS
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore.csproj.CoreCompileInputs.cache
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore.exe
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore.pdb
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore.csprojAssemblyReference.cache

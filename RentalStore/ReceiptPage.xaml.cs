@@ -20,6 +20,8 @@ namespace RentalStore
     /// </summary>
     public partial class ReceiptPage : Page
     {
+        private static List<Loan> TempLoans = new List<Loan>();
+        private static int count = 0;
         public ReceiptPage()
         {
             InitializeComponent();
@@ -27,10 +29,20 @@ namespace RentalStore
 
         public ReceiptPage(Loan loan):this()
         {
-            foreach (var item in loan.MyMovies)
+            TempLoans.Add(loan);
+            if(count == 3)
             {
-                Console.WriteLine(item.Title);
+                foreach (var item in TempLoans)
+                {
+                    Console.WriteLine(item.Days);
+                }
             }
+            count++;
+        }
+
+        private void BtnAddAnother_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new LoanPage());
         }
     }
 }

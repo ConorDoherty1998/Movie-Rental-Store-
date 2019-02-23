@@ -84,7 +84,6 @@ namespace RentalStore
         }
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("works");
             if (Basket.Capacity != 0 && days != 0)
             {
                 Loan NewLoan = new Loan(Basket, days);
