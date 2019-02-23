@@ -24,5 +24,19 @@ namespace RentalStore
         {
             InitializeComponent();
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            lbxInStock.ItemsSource = DataRepo.InStock;
+            lbxOutOfStock.ItemsSource = DataRepo.OutOfStock;
+        }
+
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
+        }
     }
 }

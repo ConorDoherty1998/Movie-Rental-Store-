@@ -20,6 +20,8 @@ namespace RentalStore
     /// </summary>
     public partial class Main : Page
     {
+        public static Customer customerSelected = new Customer();
+
         public Main()
         {
             InitializeComponent();
@@ -32,10 +34,10 @@ namespace RentalStore
 
         private void btn_Click(object sender, RoutedEventArgs e)
         {
-            DataRepo.SelectedCustomer = lbxCustomers.SelectedItem as Customer;
+            customerSelected = lbxCustomers.SelectedItem as Customer;
             Button b = (Button)sender;
             
-            if(DataRepo.SelectedCustomer != null)
+            if(customerSelected != null)
             {
                 if (b.Name == "btnViewProfile")
                 {
@@ -46,15 +48,14 @@ namespace RentalStore
                 {
                     this.NavigationService.Navigate(new LoanPage());
                 }
-                else if (b.Name == "btnViewStock")
-                {
-                    this.NavigationService.Navigate(new ViewStockPage());
-                }
                 else
                     MessageBox.Show("Error");
             }
-            else
-                MessageBox.Show("Error");
+
+            if (b.Name == "btnViewStock")
+            {
+                this.NavigationService.Navigate(new ViewStockPage());
+            }
         }
     }
 }
