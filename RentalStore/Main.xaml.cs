@@ -20,7 +20,7 @@ namespace RentalStore
     /// </summary>
     public partial class Main : Page
     {
-        public static Customer customerSelected = new Customer();
+        public Customer customerSelected = new Customer();
 
         public Main()
         {
