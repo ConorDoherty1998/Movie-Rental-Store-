@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace RentalStore
 {
     /// <summary>
-    /// Interaction logic for ViewProfile.xaml
+    /// Interaction logic for ViewProfilePage.xaml
     /// </summary>
-    public partial class ViewProfile : Page
+    public partial class ViewProfilePage : Page
     {
-        public ViewProfile()
+        public ViewProfilePage()
         {
             InitializeComponent();
         }

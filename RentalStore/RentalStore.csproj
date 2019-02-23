@@ -71,8 +71,8 @@
     <Compile Include="ReceiptPage.xaml.cs">
       <DependentUpon>ReceiptPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewProfile.xaml.cs">
-      <DependentUpon>ViewProfile.xaml</DependentUpon>
+    <Compile Include="ViewProfilePage.xaml.cs">
+      <DependentUpon>ViewProfilePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewStockPage.xaml.cs">
       <DependentUpon>ViewStockPage.xaml</DependentUpon>
@@ -101,7 +101,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ViewProfile.xaml">
+    <Page Include="ViewProfilePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

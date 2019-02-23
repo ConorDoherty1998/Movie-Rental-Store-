@@ -12,9 +12,7 @@ namespace RentalStore
 
         public Receipt(List<Loan> myLoans)
         {
-            MyLoans = myLoans;
-            
+            MyLoans = myLoans;          
         }
-
     }
 }

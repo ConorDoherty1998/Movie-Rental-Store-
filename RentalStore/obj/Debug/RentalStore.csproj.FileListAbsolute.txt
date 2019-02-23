@@ -39,7 +39,6 @@ C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\LoanPag
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\Main.g.cs
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\MainWindow.g.cs
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\ReceiptPage.g.cs
-C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\ViewProfile.g.cs
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\ViewStockPage.g.cs
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\App.g.cs
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore_MarkupCompile.cache
@@ -48,7 +47,6 @@ C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\LoanPag
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\Main.baml
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\MainWindow.baml
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\ReceiptPage.baml
-C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\ViewProfile.baml
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\ViewStockPage.baml
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore.g.resources
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore.Properties.Resources.resources
@@ -56,4 +54,6 @@ C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalS
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore.csproj.CoreCompileInputs.cache
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore.exe
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore.pdb
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\ViewProfilePage.g.cs
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\ViewProfilePage.baml
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore.csprojAssemblyReference.cache

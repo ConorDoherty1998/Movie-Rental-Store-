@@ -14,10 +14,10 @@
         </DataTemplate>
     </Page.Resources>
     <Grid>
-        <ListBox x:Name="lbxCustomers" ItemTemplate="{StaticResource customersTemplate}" HorizontalAlignment="Left" Height="308" Margin="66,63,0,0" VerticalAlignment="Top" Width="297" SelectionChanged="LbxCustomers_SelectionChanged"/>
-        <Button x:Name="btnViewProfile" Content="View Profile" HorizontalAlignment="Left" Margin="647,126,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btnCreateLoan" Content="Create Loan" HorizontalAlignment="Left" Margin="647,207,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btnViewStock" Content="View Stock" HorizontalAlignment="Left" Margin="647,261,0,0" VerticalAlignment="Top" Width="75"/>
+        <ListBox x:Name="lbxCustomers" ItemTemplate="{StaticResource customersTemplate}" HorizontalAlignment="Left" Height="308" Margin="66,63,0,0" VerticalAlignment="Top" Width="297"/>
+        <Button x:Name="btnViewProfile" Content="View Profile" HorizontalAlignment="Left" Margin="647,126,0,0" VerticalAlignment="Top" Width="75" Click="btn_Click"/>
+        <Button x:Name="btnCreateLoan" Content="Create Loan" HorizontalAlignment="Left" Margin="647,207,0,0" VerticalAlignment="Top" Width="75" Click="btn_Click"/>
+        <Button x:Name="btnViewStock" Content="View Stock" HorizontalAlignment="Left" Margin="647,261,0,0" VerticalAlignment="Top" Width="75" Click="btn_Click"/>
 
     </Grid>
 </Page>

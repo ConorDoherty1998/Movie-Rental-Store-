@@ -49,10 +49,19 @@ namespace RentalStore
         private void BtnFinish_Click(object sender, RoutedEventArgs e)
         {
             Receipt CustomerReceipt = new Receipt(TempLoans);
+
+            foreach (Loan loan in CustomerReceipt.MyLoans)
+            {
+                Console.WriteLine(loan.Price);
+            }
+            //Main.customerSelected.MyReceipts.Add(CustomerReceipt);
+            //Console.WriteLine(Main.customerSelected.MyReceipts[0].MyLoans[0].Price);
+
+            this.NavigationService.Navigate(new Main());
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
+        {           
             tblkTotalCost.Text = TotalCost().ToString();
         }
 

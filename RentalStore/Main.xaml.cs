@@ -20,7 +20,7 @@ namespace RentalStore
     /// </summary>
     public partial class Main : Page
     {
-        public static Customer customerSelected;
+        public static Customer customerSelected = new Customer();
 
         public Main()
         {
@@ -32,10 +32,31 @@ namespace RentalStore
             lbxCustomers.ItemsSource = DataRepo.GetCustomers();
         }
 
-        private void LbxCustomers_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void btn_Click(object sender, RoutedEventArgs e)
         {
             customerSelected = lbxCustomers.SelectedItem as Customer;
-            Console.WriteLine(customerSelected.Firstname);
+            Button b = (Button)sender;
+            
+            if(customerSelected != null)
+            {
+                if (b.Name == "btnViewProfile")
+                {
+                    Console.WriteLine("success");
+                    this.NavigationService.Navigate(new ViewProfilePage());
+                }
+                else if (b.Name == "btnCreateLoan")
+                {
+                    this.NavigationService.Navigate(new LoanPage());
+                }
+                else if (b.Name == "btnViewStock")
+                {
+                    this.NavigationService.Navigate(new ViewStockPage());
+                }
+                else
+                    MessageBox.Show("Error");
+            }
+            else
+                MessageBox.Show("Error");
         }
     }
 }
