@@ -31,7 +31,6 @@ namespace RentalStore
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            DataRepo.InStock = DataRepo.GetMovies();
             TempStock = DataRepo.InStock;
 
             lbxBasket.ItemsSource = Basket;

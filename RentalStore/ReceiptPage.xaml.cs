@@ -30,7 +30,7 @@ namespace RentalStore
         public ReceiptPage(Loan loan):this()
         {
             TempLoans.Add(loan);
-            if(count == 3)
+            if(count == 1)
             {
                 foreach (var item in TempLoans)
                 {

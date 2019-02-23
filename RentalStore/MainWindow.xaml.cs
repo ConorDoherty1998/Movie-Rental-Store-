@@ -28,6 +28,8 @@ namespace RentalStore
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            DataRepo.InStock = DataRepo.GetMovies();
+
             frame.NavigationService.Navigate(new LoanPage());
         }
     }
