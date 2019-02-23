@@ -30,7 +30,7 @@ namespace RentalStore
         {
             DataRepo.InStock = DataRepo.GetMovies();
 
-            frame.NavigationService.Navigate(new LoanPage());
+            frame.NavigationService.Navigate(new Main());
         }
     }
 }

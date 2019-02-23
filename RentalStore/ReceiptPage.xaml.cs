@@ -22,6 +22,7 @@ namespace RentalStore
     {
         private static List<Loan> TempLoans = new List<Loan>();
         private static int count = 0;
+
         public ReceiptPage()
         {
             InitializeComponent();
@@ -43,6 +44,28 @@ namespace RentalStore
         private void BtnAddAnother_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new LoanPage());
+        }
+
+        private void BtnFinish_Click(object sender, RoutedEventArgs e)
+        {
+            Receipt CustomerReceipt = new Receipt(TempLoans);
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            tblkTotalCost.Text = TotalCost().ToString();
+        }
+
+        private decimal TotalCost()
+        {
+            decimal total = 0;
+
+            foreach (Loan loan in TempLoans)
+            {
+                total += loan.Price;
+            }
+
+            return total;
         }
     }
 }

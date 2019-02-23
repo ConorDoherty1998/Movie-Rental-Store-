@@ -6,9 +6,18 @@
       xmlns:local="clr-namespace:RentalStore"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Main">
-
+      Background="White"
+      Title="Main" Loaded="Page_Loaded">
+    <Page.Resources>
+        <DataTemplate x:Key="customersTemplate">
+            <TextBlock Text="{Binding Path=Firstname}"></TextBlock>
+        </DataTemplate>
+    </Page.Resources>
     <Grid>
-        
+        <ListBox x:Name="lbxCustomers" ItemTemplate="{StaticResource customersTemplate}" HorizontalAlignment="Left" Height="308" Margin="66,63,0,0" VerticalAlignment="Top" Width="297"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="647,126,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="647,207,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="647,261,0,0" VerticalAlignment="Top" Width="75"/>
+
     </Grid>
 </Page>

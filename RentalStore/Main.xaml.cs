@@ -24,5 +24,10 @@ namespace RentalStore
         {
             InitializeComponent();
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            lbxCustomers.ItemsSource = DataRepo.GetCustomers();
+        }
     }
 }
