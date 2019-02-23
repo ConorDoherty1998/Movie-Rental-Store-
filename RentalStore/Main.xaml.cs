@@ -20,6 +20,8 @@ namespace RentalStore
     /// </summary>
     public partial class Main : Page
     {
+        public static Customer customerSelected;
+
         public Main()
         {
             InitializeComponent();
@@ -28,6 +30,12 @@ namespace RentalStore
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             lbxCustomers.ItemsSource = DataRepo.GetCustomers();
+        }
+
+        private void LbxCustomers_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            customerSelected = lbxCustomers.SelectedItem as Customer;
+            Console.WriteLine(customerSelected.Firstname);
         }
     }
 }
