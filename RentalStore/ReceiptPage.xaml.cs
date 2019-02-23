@@ -54,7 +54,7 @@ namespace RentalStore
             {
                 Console.WriteLine(loan.Price);
             }
-            //Main.customerSelected.MyReceipts.Add(CustomerReceipt);
+            DataRepo.SelectedCustomer.MyReceipts.Add(CustomerReceipt);
             //Console.WriteLine(Main.customerSelected.MyReceipts[0].MyLoans[0].Price);
 
             this.NavigationService.Navigate(new Main());

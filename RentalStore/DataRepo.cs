@@ -10,6 +10,7 @@ namespace RentalStore
     {
         public static List<Movie> InStock { get; set; } = new List<Movie>();
         public static List<Movie> OutOfStock { get; set; } = new List<Movie>();
+        public static Customer SelectedCustomer { get; set; }
         public static List<Customer> GetCustomers()
         {
             Customer c1 = new Customer() { Firstname = "Conor" };

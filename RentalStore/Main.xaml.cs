@@ -20,8 +20,6 @@ namespace RentalStore
     /// </summary>
     public partial class Main : Page
     {
-        public static Customer customerSelected = new Customer();
-
         public Main()
         {
             InitializeComponent();
@@ -34,10 +32,10 @@ namespace RentalStore
 
         private void btn_Click(object sender, RoutedEventArgs e)
         {
-            customerSelected = lbxCustomers.SelectedItem as Customer;
+            DataRepo.SelectedCustomer = lbxCustomers.SelectedItem as Customer;
             Button b = (Button)sender;
             
-            if(customerSelected != null)
+            if(DataRepo.SelectedCustomer != null)
             {
                 if (b.Name == "btnViewProfile")
                 {
