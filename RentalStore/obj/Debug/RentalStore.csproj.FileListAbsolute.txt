@@ -32,3 +32,27 @@ H:\second year\Semester 2\SoftwareEngineering\RentalStore\RentalStore\obj\Debug\
 H:\second year\Semester 2\SoftwareEngineering\RentalStore\RentalStore\obj\Debug\RentalStore.pdb
 H:\second year\Semester 2\SoftwareEngineering\RentalStore\RentalStore\obj\Debug\Page1.g.cs
 H:\second year\Semester 2\SoftwareEngineering\RentalStore\RentalStore\obj\Debug\Page1.baml
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\bin\Debug\RentalStore.exe.config
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\bin\Debug\RentalStore.exe
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\bin\Debug\RentalStore.pdb
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\LoanPage.g.cs
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\Main.g.cs
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\MainWindow.g.cs
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\ReceiptPage.g.cs
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\ViewProfile.g.cs
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\ViewStockPage.g.cs
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\App.g.cs
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore_MarkupCompile.cache
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore_MarkupCompile.lref
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\LoanPage.baml
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\Main.baml
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\MainWindow.baml
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\ReceiptPage.baml
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\ViewProfile.baml
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\ViewStockPage.baml
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore.g.resources
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore.Properties.Resources.resources
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore.csproj.GenerateResource.cache
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore.csproj.CoreCompileInputs.cache
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore.exe
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore.pdb

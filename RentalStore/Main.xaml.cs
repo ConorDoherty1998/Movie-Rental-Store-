@@ -16,19 +16,13 @@ using System.Windows.Shapes;
 namespace RentalStore
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Main.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Main : Page
     {
-        public MainWindow()
+        public Main()
         {
             InitializeComponent();
-
-            Loaded += Window_Loaded;
-        }
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            frame.NavigationService.Navigate(new LoanPage());
         }
     }
 }

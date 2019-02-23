@@ -16,19 +16,21 @@ using System.Windows.Shapes;
 namespace RentalStore
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ReceiptPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ReceiptPage : Page
     {
-        public MainWindow()
+        public ReceiptPage()
         {
             InitializeComponent();
-
-            Loaded += Window_Loaded;
         }
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+
+        public ReceiptPage(Loan loan):this()
         {
-            frame.NavigationService.Navigate(new LoanPage());
+            foreach (var item in loan.MyMovies)
+            {
+                Console.WriteLine(item.Title);
+            }
         }
     }
 }

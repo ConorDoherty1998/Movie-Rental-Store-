@@ -4,17 +4,17 @@
 exe
 C#
 .cs
-H:\second year\Semester 2\SoftwareEngineering\RentalStore\RentalStore\obj\Debug\
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\
 RentalStore
 none
 false
 DEBUG;TRACE
-H:\second year\Semester 2\SoftwareEngineering\RentalStore\RentalStore\App.xaml
-2400784391
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\App.xaml
+6-1510036924
 
-151019614414
+19-289648052
 131569487696
-MainWindow.xaml;Page1.xaml;
+LoanPage.xaml;Main.xaml;MainWindow.xaml;ReceiptPage.xaml;ViewProfile.xaml;ViewStockPage.xaml;
 
 True
 

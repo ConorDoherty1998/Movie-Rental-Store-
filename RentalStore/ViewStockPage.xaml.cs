@@ -16,19 +16,13 @@ using System.Windows.Shapes;
 namespace RentalStore
 {
     /// <summary>
-    /// Interaction logic for Page1.xaml
+    /// Interaction logic for ViewStockPage.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class ViewStockPage : Page
     {
-        List<Loan> tempReceipt = new List<Loan>(); 
-        public Page1(Loan loan)
+        public ViewStockPage()
         {
             InitializeComponent();
-
-            tempReceipt.Add(loan);
-
         }
-
-
     }
 }
