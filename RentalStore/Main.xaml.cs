@@ -55,5 +55,15 @@ namespace RentalStore
             else
                 MessageBox.Show("error");
         }
+
+        private void LbxCustomers_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Customer selected = lbxCustomers.SelectedItem as Customer;
+            foreach (Receipt item in selected.MyReceipts)
+            {
+                Console.WriteLine(item.TotalCost);
+            }
+            
+        }
     }
 }

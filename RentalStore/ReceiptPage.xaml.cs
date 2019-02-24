@@ -44,7 +44,7 @@ namespace RentalStore
             TempLoans.Clear();
 
             Main.customerSelected.MyReceipts.Add(CustomerReceipt);
-            Console.WriteLine(Main.customerSelected.MyReceipts[0].TotalCost);
+            //Console.WriteLine(Main.customerSelected.MyReceipts[0].TotalCost);
 
             this.NavigationService.Navigate(new Main());
         }
