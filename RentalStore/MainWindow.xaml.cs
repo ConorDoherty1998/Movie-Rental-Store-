@@ -29,6 +29,7 @@ namespace RentalStore
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             DataRepo.InStock = DataRepo.GetMovies();
+            DataRepo.CurrentCustomers = DataRepo.GetCustomers();
 
             frame.NavigationService.Navigate(new Main());
         }

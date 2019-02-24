@@ -10,20 +10,20 @@
       Title="ViewProfilePage" Loaded="Page_Loaded">
     <Page.Resources>
         <DataTemplate x:Key="receiptsTemplate">
-            <StackPanel>
+            <StackPanel Orientation="Horizontal">
                 <TextBlock Text="{Binding Path=TotalCost}"></TextBlock>
                 <TextBlock Text="{Binding Path=DateIssued}"></TextBlock>
             </StackPanel>
         </DataTemplate>
-        <DataTemplate x:Key="loansTemplate">
+        <!--<DataTemplate x:Key="loansTemplate">
             <StackPanel>
                 <TextBlock Text="{Binding Path=Title}"></TextBlock>
             </StackPanel>
-        </DataTemplate>
+        </DataTemplate>-->
     </Page.Resources>
     <Grid>
         <ListBox x:Name="lbxReceipts" ItemTemplate="{StaticResource receiptsTemplate}" HorizontalAlignment="Left" Height="241" Margin="101,106,0,0" VerticalAlignment="Top" Width="265" SelectionChanged="LbxReceipts_SelectionChanged"/>
-        <ListBox x:Name="lbxLoans" ItemTemplate="{StaticResource loansTemplate}" HorizontalAlignment="Left" Height="241" Margin="490,106,0,0" VerticalAlignment="Top" Width="265"/>
+        <ListBox x:Name="lbxLoans" HorizontalAlignment="Left" Height="241" Margin="490,106,0,0" VerticalAlignment="Top" Width="265"/>
         <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="54,364,0,0" VerticalAlignment="Top" Width="75" Click="BtnBack_Click"/>
     </Grid>
 </Page>

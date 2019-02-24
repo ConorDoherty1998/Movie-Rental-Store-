@@ -25,7 +25,7 @@ namespace RentalStore
         {
             InitializeComponent();
             Console.WriteLine(Main.customerSelected.Firstname);
-            Console.WriteLine(Main.customerSelected.MyReceipts[0].TotalCost);
+            //Console.WriteLine(Main.customerSelected.MyReceipts[0].TotalCost);
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)

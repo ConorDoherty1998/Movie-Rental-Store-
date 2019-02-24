@@ -29,7 +29,7 @@ namespace RentalStore
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            lbxCustomers.ItemsSource = DataRepo.GetCustomers();
+            lbxCustomers.ItemsSource = DataRepo.CurrentCustomers;
         }
 
         private void btn_Click(object sender, RoutedEventArgs e)
