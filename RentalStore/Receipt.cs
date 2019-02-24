@@ -10,11 +10,30 @@ namespace RentalStore
     {
         public List<Loan> MyLoans { get; set; }
         public decimal TotalCost { get; set; }
+        public DateTime DateIssued { get; set; }
+
+        public Receipt()
+        {
+
+        }
 
         public Receipt(List<Loan> myLoans, decimal totalCost)
         {
             MyLoans = myLoans;
             TotalCost = totalCost;
+            DateIssued = DateTime.Now;
+        }
+
+        public override string ToString()
+        {
+            int count = 0;
+
+            foreach (Loan loan in MyLoans)
+            {
+                count++;
+            }
+
+            return $"Loans: {count}, Date Issued: {DateIssued}, Total Cost: {TotalCost}";
         }
     }
 }

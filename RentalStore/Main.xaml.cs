@@ -41,7 +41,6 @@ namespace RentalStore
             {
                 if (b.Name == "btnViewProfile")
                 {
-                    Console.WriteLine("success");
                     this.NavigationService.Navigate(new ViewProfilePage());
                 }
                 else if (b.Name == "btnCreateLoan")

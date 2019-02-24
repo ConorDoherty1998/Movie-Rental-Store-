@@ -20,9 +20,35 @@ namespace RentalStore
     /// </summary>
     public partial class ViewProfilePage : Page
     {
+        List<Loan> temp = new List<Loan>();
         public ViewProfilePage()
         {
             InitializeComponent();
+            Console.WriteLine(Main.customerSelected.Firstname);
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            lbxReceipts.ItemsSource = Main.customerSelected.MyReceipts;
+            
+        }
+
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
+        }
+
+        private void LbxReceipts_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Receipt selected = lbxReceipts.SelectedItem as Receipt;
+
+            if(selected != null)
+            {
+                lbxLoans.ItemsSource = selected.MyLoans;
+            }
         }
     }
 }

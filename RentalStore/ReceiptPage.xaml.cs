@@ -21,10 +21,12 @@ namespace RentalStore
     public partial class ReceiptPage : Page
     {
         private static List<Loan> TempLoans = new List<Loan>();
+        private static List<String> yourNames = new List<String>() { "brian","dave"};
 
         public ReceiptPage()
         {
             InitializeComponent();
+            Main.customerSelected.Names = yourNames;
         }
 
         public ReceiptPage(Loan loan):this()
