@@ -46,6 +46,7 @@ namespace RentalStore
             {
                 Basket.Add(selected);
                 TempStock.Remove(selected);
+                DataRepo.UpdateStockRemove(selected);
 
                 lbxStock.ItemsSource = null;
                 lbxStock.ItemsSource = TempStock;
@@ -61,6 +62,7 @@ namespace RentalStore
             {
                 TempStock.Add(selected);
                 Basket.Remove(selected);
+                DataRepo.UpdateStockAdd(selected);
 
                 lbxStock.ItemsSource = null;
                 lbxStock.ItemsSource = TempStock;
@@ -90,7 +92,7 @@ namespace RentalStore
                 NewLoan.DateReturn();
                 NewLoan.Cost();
 
-                DataRepo.InStock = TempStock;
+                //DataRepo.InStock = TempStock;
 
                 this.NavigationService.Navigate(new ReceiptPage(NewLoan));
             }

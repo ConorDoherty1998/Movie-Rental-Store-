@@ -9,10 +9,12 @@ namespace RentalStore
     public class Receipt
     {
         public List<Loan> MyLoans { get; set; }
+        public decimal TotalCost { get; set; }
 
-        public Receipt(List<Loan> myLoans)
+        public Receipt(List<Loan> myLoans, decimal totalCost)
         {
-            MyLoans = myLoans;          
+            MyLoans = myLoans;
+            TotalCost = totalCost;
         }
     }
 }

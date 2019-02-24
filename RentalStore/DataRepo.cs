@@ -42,10 +42,16 @@ namespace RentalStore
             return moviesCreated;
         }
 
-        public static void ChangeStock(Movie yourMovie)
+        public static void UpdateStockRemove(Movie yourMovie)
         {
             OutOfStock.Add(yourMovie);
             InStock.Remove(yourMovie);
+        }
+
+        public static void UpdateStockAdd(Movie yourMovie)
+        {
+            InStock.Add(yourMovie);
+            OutOfStock.Remove(yourMovie);
         }
     }
 }

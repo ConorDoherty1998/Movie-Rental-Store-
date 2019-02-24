@@ -8,10 +8,19 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Background="White"
       Title="ReceiptPage" Loaded="Page_Loaded">
-
+    <Page.Resources>
+        <DataTemplate x:Key="loansTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Path=Price}" Margin="5"></TextBlock>
+                <TextBlock Text="{Binding Path=Days}" Margin="5"></TextBlock>
+                <TextBlock Text="{Binding Path=ReturnDate}"></TextBlock>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
     <Grid>
         <Button x:Name="btnAddAnother" Content="Add another" HorizontalAlignment="Left" Margin="94,335,0,0" VerticalAlignment="Top" Width="75" Click="BtnAddAnother_Click"/>
         <Button x:Name="btnFinish" Content="Finish" HorizontalAlignment="Left" Margin="651,335,0,0" VerticalAlignment="Top" Width="75" Click="BtnFinish_Click"/>
         <TextBlock x:Name="tblkTotalCost" HorizontalAlignment="Left" Margin="651,276,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.933,0.543" Height="31" Width="75"/>
+        <ListBox x:Name="lbxLoans" ItemTemplate="{StaticResource loansTemplate}" HorizontalAlignment="Left" Height="160" Margin="94,147,0,0" VerticalAlignment="Top" Width="632"/>
     </Grid>
 </Page>

@@ -36,8 +36,8 @@ namespace RentalStore
         {
             customerSelected = lbxCustomers.SelectedItem as Customer;
             Button b = (Button)sender;
-            
-            if(customerSelected != null)
+
+            if (customerSelected != null)
             {
                 if (b.Name == "btnViewProfile")
                 {
@@ -48,14 +48,13 @@ namespace RentalStore
                 {
                     this.NavigationService.Navigate(new LoanPage());
                 }
-                else
-                    MessageBox.Show("Error");
             }
-
-            if (b.Name == "btnViewStock")
+            else if (b.Name == "btnViewStock")
             {
                 this.NavigationService.Navigate(new ViewStockPage());
             }
+            else
+                MessageBox.Show("error");
         }
     }
 }
