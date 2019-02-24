@@ -21,12 +21,10 @@ namespace RentalStore
     public partial class ReceiptPage : Page
     {
         private static List<Loan> TempLoans = new List<Loan>();
-        private static List<String> yourNames = new List<String>() { "brian","dave"};
 
         public ReceiptPage()
         {
-            InitializeComponent();
-            Main.customerSelected.Names = yourNames;
+            InitializeComponent();           
         }
 
         public ReceiptPage(Loan loan):this()
@@ -44,12 +42,9 @@ namespace RentalStore
             Receipt CustomerReceipt = new Receipt(TempLoans, TotalCost());
 
             TempLoans.Clear();
-            //foreach (Loan loan in CustomerReceipt.MyLoans)
-            //{
-            //    Console.WriteLine(loan.Price);
-            //}
-            //Main.customerSelected.MyReceipts.Add(CustomerReceipt);
-            //Console.WriteLine(Main.customerSelected.MyReceipts[0].MyLoans[0].Price);
+
+            Main.customerSelected.MyReceipts.Add(CustomerReceipt);
+            Console.WriteLine(Main.customerSelected.MyReceipts[0].TotalCost);
 
             this.NavigationService.Navigate(new Main());
         }
