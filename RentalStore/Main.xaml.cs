@@ -25,6 +25,7 @@ namespace RentalStore
         public Main()
         {
             InitializeComponent();
+            
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -58,12 +59,7 @@ namespace RentalStore
 
         private void LbxCustomers_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Customer selected = lbxCustomers.SelectedItem as Customer;
-            foreach (Receipt item in selected.MyReceipts)
-            {
-                Console.WriteLine(item.TotalCost);
-            }
-            
+            Customer selected = lbxCustomers.SelectedItem as Customer;           
         }
     }
 }

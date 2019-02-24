@@ -56,4 +56,3 @@ C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalS
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore.pdb
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\ViewProfilePage.g.cs
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\ViewProfilePage.baml
-C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore.csprojAssemblyReference.cache

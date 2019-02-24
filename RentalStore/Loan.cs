@@ -39,5 +39,15 @@ namespace RentalStore
 
             Price = price;
         }
+
+        public override string ToString()
+        {
+            string movieList = "";
+            foreach (Movie movie in MyMovies)
+            {
+                movieList += movie.Title;
+            }
+            return movieList;
+        }
     }
 }

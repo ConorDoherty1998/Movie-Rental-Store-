@@ -40,11 +40,12 @@ namespace RentalStore
         private void BtnFinish_Click(object sender, RoutedEventArgs e)
         {
             Receipt CustomerReceipt = new Receipt(TempLoans, TotalCost());
-
-            TempLoans.Clear();
-
+         
             Main.customerSelected.MyReceipts.Add(CustomerReceipt);
-            //Console.WriteLine(Main.customerSelected.MyReceipts[0].TotalCost);
+
+            Console.WriteLine(Main.customerSelected.MyReceipts[0].MyLoans[0]);
+            //TempLoans.Clear();
+            
 
             this.NavigationService.Navigate(new Main());
         }

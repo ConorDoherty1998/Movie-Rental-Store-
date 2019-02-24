@@ -8,7 +8,7 @@ namespace RentalStore
 {
     public class Receipt
     {
-        public List<Loan> MyLoans { get; set; }
+        public List<Loan> MyLoans { get; set; } = new List<Loan>();
         public decimal TotalCost { get; set; }
         public DateTime DateIssued { get; set; }
 

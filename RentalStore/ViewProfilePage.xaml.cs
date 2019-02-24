@@ -24,8 +24,8 @@ namespace RentalStore
         public ViewProfilePage()
         {
             InitializeComponent();
-            Console.WriteLine(Main.customerSelected.Firstname);
-            //Console.WriteLine(Main.customerSelected.MyReceipts[0].TotalCost);
+            //Console.WriteLine(Main.customerSelected.Firstname);
+            //Console.WriteLine(Main.customerSelected.MyReceipts[0].MyLoans[0]);
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -44,11 +44,12 @@ namespace RentalStore
 
         private void LbxReceipts_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Receipt selected = lbxReceipts.SelectedItem as Receipt;
+            Receipt selected = lbxReceipts.SelectedItem as Receipt;           
 
             if(selected != null)
             {
                 lbxLoans.ItemsSource = selected.MyLoans;
+                Console.WriteLine(selected.MyLoans[0]);
             }
         }
     }
