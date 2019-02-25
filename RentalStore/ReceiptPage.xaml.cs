@@ -20,7 +20,8 @@ namespace RentalStore
     /// </summary>
     public partial class ReceiptPage : Page
     {
-        private static List<Loan> TempLoans = new List<Loan>();
+        public static List<Loan> TempLoans = new List<Loan>();
+        public List<Loan> TempLoans2 = new List<Loan>();
 
         public ReceiptPage()
         {
@@ -43,10 +44,13 @@ namespace RentalStore
          
             Main.customerSelected.MyReceipts.Add(CustomerReceipt);
 
-            Console.WriteLine(Main.customerSelected.MyReceipts[0].MyLoans[0]);
+            //Console.WriteLine(Main.customerSelected.MyReceipts[0].MyLoans[0]);
             //TempLoans.Clear();
-            
 
+            foreach (var item in TempLoans2)
+            {
+                Console.WriteLine(item);
+            }
             this.NavigationService.Navigate(new Main());
         }
 
