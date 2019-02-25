@@ -24,6 +24,6 @@
     <Grid>
         <ListBox x:Name="lbxReceipts" HorizontalAlignment="Left" Height="241" Margin="101,106,0,0" VerticalAlignment="Top" Width="265" SelectionChanged="LbxReceipts_SelectionChanged"/>
         <ListBox x:Name="lbxLoans" HorizontalAlignment="Left" Height="241" Margin="490,106,0,0" VerticalAlignment="Top" Width="265"/>
-        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="54,364,0,0" VerticalAlignment="Top" Width="75" Click="BtnBack_Click"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="54,352,0,0" VerticalAlignment="Top" Width="75" Click="BtnBack_Click"/>
     </Grid>
 </Page>

@@ -63,3 +63,4 @@ H:\second year\Semester 2\SoftwareEngineering\RentalStore\RentalStore\obj\Debug\
 H:\second year\Semester 2\SoftwareEngineering\RentalStore\RentalStore\obj\Debug\ReceiptPage.baml
 H:\second year\Semester 2\SoftwareEngineering\RentalStore\RentalStore\obj\Debug\ViewProfilePage.baml
 H:\second year\Semester 2\SoftwareEngineering\RentalStore\RentalStore\obj\Debug\ViewStockPage.baml
+C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore.csprojAssemblyReference.cache

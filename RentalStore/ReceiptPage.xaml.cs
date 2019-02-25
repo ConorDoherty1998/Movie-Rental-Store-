@@ -40,17 +40,15 @@ namespace RentalStore
 
         private void BtnFinish_Click(object sender, RoutedEventArgs e)
         {
-            Receipt CustomerReceipt = new Receipt(TempLoans, TotalCost());
-         
+            foreach (Loan loan in TempLoans)
+            {
+                TempLoans2.Add(loan);
+            }
+            Receipt CustomerReceipt = new Receipt(TempLoans2, TotalCost());        
             Main.customerSelected.MyReceipts.Add(CustomerReceipt);
 
-            //Console.WriteLine(Main.customerSelected.MyReceipts[0].MyLoans[0]);
-            //TempLoans.Clear();
+            TempLoans.Clear();
 
-            foreach (var item in TempLoans2)
-            {
-                Console.WriteLine(item);
-            }
             this.NavigationService.Navigate(new Main());
         }
 
