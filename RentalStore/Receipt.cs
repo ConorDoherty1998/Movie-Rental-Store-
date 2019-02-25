@@ -33,7 +33,7 @@ namespace RentalStore
                 count++;
             }
 
-            return $"Loans: {count}, Date Issued: {DateIssued}, Total Cost: {TotalCost}";
+            return $"Loans: {count}, Date Issued: {DateIssued.ToShortDateString()}, Total Cost: {TotalCost}";
         }
     }
 }

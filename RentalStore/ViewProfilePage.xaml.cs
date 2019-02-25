@@ -49,7 +49,7 @@ namespace RentalStore
             if(selected != null)
             {
                 lbxLoans.ItemsSource = selected.MyLoans;
-                Console.WriteLine(selected.MyLoans[0]);
+                
             }
         }
     }

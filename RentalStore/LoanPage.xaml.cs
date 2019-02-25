@@ -20,7 +20,6 @@ namespace RentalStore
     /// </summary>
     public partial class LoanPage : Page
     {
-        List<Movie> Basket = new List<Movie>();
         List<Movie> TempStock = new List<Movie>();
         private int days = 0;
 
@@ -32,44 +31,11 @@ namespace RentalStore
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             TempStock = DataRepo.InStock;
-
-            lbxBasket.ItemsSource = Basket;
+           
             lbxStock.ItemsSource = TempStock;
             tblkDays.Text = days.ToString();
         }
 
-        private void btnAdd_Click(object sender, RoutedEventArgs e)
-        {
-            Movie selected = lbxStock.SelectedItem as Movie;
-
-            if (selected != null)
-            {
-                Basket.Add(selected);
-                TempStock.Remove(selected);
-                DataRepo.UpdateStockRemove(selected);
-
-                lbxStock.ItemsSource = null;
-                lbxStock.ItemsSource = TempStock;
-                lbxBasket.ItemsSource = null;
-                lbxBasket.ItemsSource = Basket;
-            }
-        }
-        private void btnRemove_Click(object sender, RoutedEventArgs e)
-        {
-            Movie selected = lbxBasket.SelectedItem as Movie;
-
-            if (selected != null)
-            {
-                TempStock.Add(selected);
-                Basket.Remove(selected);
-                DataRepo.UpdateStockAdd(selected);
-
-                lbxStock.ItemsSource = null;
-                lbxStock.ItemsSource = TempStock;
-                lbxBasket.ItemsSource = null;
-                lbxBasket.ItemsSource = Basket;
-            }
-        }
         private void btnIncrease_Click(object sender, RoutedEventArgs e)
         {
             days++;
@@ -85,14 +51,16 @@ namespace RentalStore
         }
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
-            if (Basket.Count != 0 && days != 0)
+            Movie selected = lbxStock.SelectedItem as Movie;
+            if (selected != null && days != 0)
             {
-                Loan NewLoan = new Loan(Basket, days);
+                DataRepo.UpdateStockRemove(selected);
 
+                Loan NewLoan = new Loan(selected, days);
                 NewLoan.DateReturn();
-                NewLoan.Cost();
+                NewLoan.Cost();               
 
-                //DataRepo.InStock = TempStock;
+                DataRepo.InStock = TempStock;
 
                 this.NavigationService.Navigate(new ReceiptPage(NewLoan));
             }
@@ -100,5 +68,14 @@ namespace RentalStore
                 MessageBox.Show("You have to select at least one movie and rent for at least one day");
         }
 
+        private void lbxStock_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Movie selected = lbxStock.SelectedItem as Movie;
+
+            if(selected != null)
+            {
+                loanGrid.DataContext = selected;
+            }
+        }
     }
 }

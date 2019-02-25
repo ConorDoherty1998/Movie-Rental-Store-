@@ -18,7 +18,6 @@ C:\Users\s00179227\source\repos\RentalStore\RentalStore\obj\Debug\loan.baml
 H:\second year\Semester 2\SoftwareEngineering\RentalStore\RentalStore\bin\Debug\RentalStore.exe.config
 H:\second year\Semester 2\SoftwareEngineering\RentalStore\RentalStore\bin\Debug\RentalStore.exe
 H:\second year\Semester 2\SoftwareEngineering\RentalStore\RentalStore\bin\Debug\RentalStore.pdb
-H:\second year\Semester 2\SoftwareEngineering\RentalStore\RentalStore\obj\Debug\RentalStore.csprojAssemblyReference.cache
 H:\second year\Semester 2\SoftwareEngineering\RentalStore\RentalStore\obj\Debug\MainWindow.g.cs
 H:\second year\Semester 2\SoftwareEngineering\RentalStore\RentalStore\obj\Debug\App.g.cs
 H:\second year\Semester 2\SoftwareEngineering\RentalStore\RentalStore\obj\Debug\RentalStore_MarkupCompile.cache

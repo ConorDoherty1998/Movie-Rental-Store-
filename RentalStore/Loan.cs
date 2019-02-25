@@ -8,7 +8,7 @@ namespace RentalStore
 {
     public class Loan
     {
-        public List<Movie> MyMovies { get; set; } = new List<Movie>();
+        public Movie MyMovie { get; set; }
         public int Days { get; set; }
         public DateTime ReturnDate { get; set; }
         public decimal Price { get; set; }
@@ -17,9 +17,9 @@ namespace RentalStore
         {
 
         }
-        public Loan(List<Movie> myMovies, int days)
+        public Loan(Movie myMovie, int days)
         {
-            MyMovies = myMovies;
+            MyMovie = myMovie;
             Days = days;
         }
 
@@ -32,22 +32,14 @@ namespace RentalStore
         {
             decimal price = 0;
 
-            foreach (Movie movie in MyMovies)
-            {
-                price += movie.PricePerDay * Days;
-            }
+            price = MyMovie.PricePerDay * Days;
 
             Price = price;
         }
 
         public override string ToString()
         {
-            string movieList = "";
-            foreach (Movie movie in MyMovies)
-            {
-                movieList += movie.Title;
-            }
-            return movieList;
+            return $"{MyMovie.Title}, {ReturnDate.ToShortDateString()}, {Price}";
         }
     }
 }
