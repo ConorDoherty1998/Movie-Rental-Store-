@@ -49,10 +49,6 @@ namespace RentalStore
                     this.NavigationService.Navigate(new LoanPage());
                 }
             }
-            else if (b.Name == "btnViewStock")
-            {
-                this.NavigationService.Navigate(new ViewStockPage());
-            }
             else
                 MessageBox.Show("error");
         }
@@ -60,6 +56,11 @@ namespace RentalStore
         private void LbxCustomers_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Customer selected = lbxCustomers.SelectedItem as Customer;           
+        }
+
+        private void btnViewStock_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new ViewStockPage());
         }
     }
 }

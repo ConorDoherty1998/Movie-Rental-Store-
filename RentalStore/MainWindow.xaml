@@ -5,6 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RentalStore"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
-    <Frame x:Name="frame" NavigationUIVisibility="Hidden" Margin="0 0 0 20"></Frame>
+        Title="MainWindow" Height="494.118" Width="800" Loaded="Window_Loaded">
+    <Frame x:Name="frame" NavigationUIVisibility="Hidden" Margin="0,0,0,0"></Frame>
 </Window>

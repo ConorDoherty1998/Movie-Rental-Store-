@@ -15,9 +15,9 @@
     </Page.Resources>
     <Grid>
         <ListBox x:Name="lbxCustomers" ItemTemplate="{StaticResource customersTemplate}" HorizontalAlignment="Left" Height="308" Margin="66,63,0,0" VerticalAlignment="Top" Width="297" SelectionChanged="LbxCustomers_SelectionChanged"/>
-        <Button x:Name="btnViewProfile" Content="View Profile" HorizontalAlignment="Left" Margin="435,111,0,0" VerticalAlignment="Top" Width="171" Click="btn_Click" Height="45"/>
-        <Button x:Name="btnCreateLoan" Content="Create Loan" HorizontalAlignment="Left" Margin="435,188,0,0" VerticalAlignment="Top" Width="171" Click="btn_Click" Height="47"/>
-        <Button x:Name="btnViewStock" Content="View Stock" HorizontalAlignment="Left" Margin="435,281,0,0" VerticalAlignment="Top" Width="171" Click="btn_Click" Height="55"/>
+        <Button x:Name="btnViewProfile" Content="View Profile" HorizontalAlignment="Left" Margin="470,385,0,0" VerticalAlignment="Top" Width="171" Click="btn_Click" Height="55"/>
+        <Button x:Name="btnCreateLoan" Content="Create Loan" HorizontalAlignment="Left" Margin="269,385,0,0" VerticalAlignment="Top" Width="171" Click="btn_Click" Height="55"/>
+        <Button x:Name="btnViewStock" Content="View Stock" HorizontalAlignment="Left" Margin="66,385,0,0" VerticalAlignment="Top" Width="171" Height="55" Click="btnViewStock_Click"/>
 
     </Grid>
 </Page>
