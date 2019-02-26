@@ -30,7 +30,7 @@ namespace RentalStore
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            lbxReceipts.ItemsSource = Main.customerSelected.MyReceipts;
+            lbxReceipts.ItemsSource = Main.SelectedCustomer.MyReceipts;
             
         }
 

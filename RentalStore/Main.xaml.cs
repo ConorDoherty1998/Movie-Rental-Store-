@@ -20,7 +20,7 @@ namespace RentalStore
     /// </summary>
     public partial class Main : Page
     {
-        public static Customer customerSelected = new Customer();
+        public static Customer SelectedCustomer = new Customer();
 
         public Main()
         {
@@ -31,14 +31,15 @@ namespace RentalStore
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             lbxCustomers.ItemsSource = DataRepo.CurrentCustomers;
+            lbxMovies.ItemsSource = DataRepo.OutOfStock;
         }
 
         private void btn_Click(object sender, RoutedEventArgs e)
         {
-            customerSelected = lbxCustomers.SelectedItem as Customer;
+            SelectedCustomer = lbxCustomers.SelectedItem as Customer;
             Button b = (Button)sender;
 
-            if (customerSelected != null)
+            if (SelectedCustomer != null)
             {
                 if (b.Name == "btnViewProfile")
                 {
@@ -46,21 +47,30 @@ namespace RentalStore
                 }
                 else if (b.Name == "btnCreateLoan")
                 {
-                    this.NavigationService.Navigate(new LoanPage());
+                    if(DataRepo.InStock.Count == 0)
+                    {
+                        MessageBox.Show("All movies are out of stock");
+                    }
+                    else
+                        this.NavigationService.Navigate(new LoanPage());
                 }
             }
             else
-                MessageBox.Show("error");
-        }
-
-        private void LbxCustomers_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Customer selected = lbxCustomers.SelectedItem as Customer;           
+                MessageBox.Show("You must select a customer");
         }
 
         private void btnViewStock_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new ViewStockPage());
+        }
+
+        private void BtnReturn_Click(object sender, RoutedEventArgs e)
+        {
+            Movie selected = lbxMovies.SelectedItem as Movie;
+            DataRepo.UpdateStockAdd(selected);
+
+            lbxMovies.ItemsSource = null;
+            lbxMovies.ItemsSource = DataRepo.OutOfStock;
         }
     }
 }

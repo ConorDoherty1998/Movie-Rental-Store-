@@ -45,7 +45,7 @@ namespace RentalStore
                 TempLoans2.Add(loan);
             }
             Receipt CustomerReceipt = new Receipt(TempLoans2, TotalCost());        
-            Main.customerSelected.MyReceipts.Add(CustomerReceipt);
+            Main.SelectedCustomer.MyReceipts.Add(CustomerReceipt);
 
             TempLoans.Clear();
 

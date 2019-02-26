@@ -28,6 +28,16 @@ namespace RentalStore
             ReturnDate = DateTime.Now.AddDays(Days);
         }
 
+        public bool IsOverdue()
+        {
+            if (DateTime.Now > ReturnDate)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+
         public void Cost()
         {
             decimal price = 0;
