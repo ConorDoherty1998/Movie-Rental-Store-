@@ -13,7 +13,6 @@ namespace RentalStore
         public DateTime ReturnDate { get; set; }
         public decimal Price { get; set; }
 
-
         public string Colour
         {
             get
@@ -24,7 +23,6 @@ namespace RentalStore
                     return "Black";
             }
         }
-
 
         public Loan()
         {
@@ -43,6 +41,7 @@ namespace RentalStore
 
         public bool IsOverdue()
         {
+            DateTime example = new DateTime(2019, 12, 01);
             if (DateTime.Now > ReturnDate)
             {
                 return true;

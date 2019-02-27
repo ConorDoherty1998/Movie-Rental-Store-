@@ -21,7 +21,7 @@ namespace RentalStore
     public partial class ReceiptPage : Page
     {
         public static List<Loan> TempLoans = new List<Loan>();
-        public List<Loan> TempLoans2 = new List<Loan>();
+        private List<Loan> LoansAddedToReceipt = new List<Loan>();
 
         public ReceiptPage()
         {
@@ -42,9 +42,9 @@ namespace RentalStore
         {
             foreach (Loan loan in TempLoans)
             {
-                TempLoans2.Add(loan);
+                LoansAddedToReceipt.Add(loan);
             }
-            Receipt CustomerReceipt = new Receipt(TempLoans2, TotalCost());        
+            Receipt CustomerReceipt = new Receipt(LoansAddedToReceipt, TotalCost());        
             Main.SelectedCustomer.MyReceipts.Add(CustomerReceipt);
 
             TempLoans.Clear();

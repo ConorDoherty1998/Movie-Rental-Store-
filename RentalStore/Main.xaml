@@ -9,8 +9,14 @@
       Background="White"
       Title="Main" Loaded="Page_Loaded">
     <Page.Resources>
+        <Style x:Key="overdue" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{Binding Path=Colour}"/>
+        </Style>
         <DataTemplate x:Key="customersTemplate">
             <TextBlock Text="{Binding Path=Firstname}"></TextBlock>
+        </DataTemplate>
+        <DataTemplate x:Key="moviesTemplate">
+            <TextBlock Text="{Binding Path=MyMovie}" Style="{StaticResource overdue}"></TextBlock>
         </DataTemplate>
     </Page.Resources>
     <Grid>
@@ -28,7 +34,7 @@
             <Border HorizontalAlignment="Center" Height="2" Background="Blue" Width="300" CornerRadius="100"></Border>
         </StackPanel>
         <ListBox x:Name="lbxCustomers" ItemTemplate="{StaticResource customersTemplate}" Margin="50,20" Grid.Row="1"/>
-        <ListBox x:Name="lbxMovies" Margin="50,20" Grid.Column="1" Grid.Row="1" DisplayMemberPath="MyMovie"/>
+        <ListBox x:Name="lbxMovies" ItemTemplate="{StaticResource moviesTemplate}" Margin="50,20" Grid.Column="1" Grid.Row="1"/>
         <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center">
             <Button x:Name="btnRegister" Content="Register Customer" VerticalAlignment="Top" Height="55" Width="150" Click="BtnRegister_Click" Margin="5"/>
             <Button x:Name="btnViewProfile" Content="View Customer History" VerticalAlignment="Top" Width="150" Click="btn_Click" Height="55" Margin="5"/>

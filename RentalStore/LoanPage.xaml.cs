@@ -58,7 +58,9 @@ namespace RentalStore
 
                 Loan NewLoan = new Loan(selected, days);
                 NewLoan.DateReturn();
-                NewLoan.Cost();               
+                NewLoan.Cost();
+
+                DataRepo.AllLoans.Add(NewLoan);
 
                 DataRepo.InStock = TempStock;
 
@@ -76,11 +78,6 @@ namespace RentalStore
             {
                 loanGrid.DataContext = selected;
             }
-        }
-
-        private void btnCancel_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

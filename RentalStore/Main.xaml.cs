@@ -30,7 +30,7 @@ namespace RentalStore
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             lbxCustomers.ItemsSource = DataRepo.CurrentCustomers;
-            lbxMovies.ItemsSource = DataRepo.OutOfStock;
+            lbxMovies.ItemsSource = DataRepo.AllLoans;
         }
 
         private void btn_Click(object sender, RoutedEventArgs e)
@@ -65,11 +65,12 @@ namespace RentalStore
 
         private void BtnReturn_Click(object sender, RoutedEventArgs e)
         {
-            Movie selected = lbxMovies.SelectedItem as Movie;
-            DataRepo.UpdateStockAdd(selected);
+            Loan selectedLoan = lbxMovies.SelectedItem as Loan;
+            DataRepo.UpdateStockAdd(selectedLoan.MyMovie);
+            DataRepo.AllLoans.Remove(selectedLoan);
 
             lbxMovies.ItemsSource = null;
-            lbxMovies.ItemsSource = DataRepo.OutOfStock;
+            lbxMovies.ItemsSource = DataRepo.AllLoans;
         }
 
         private void BtnRegister_Click(object sender, RoutedEventArgs e)
