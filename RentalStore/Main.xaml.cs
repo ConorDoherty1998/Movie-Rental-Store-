@@ -71,5 +71,10 @@ namespace RentalStore
             lbxMovies.ItemsSource = null;
             lbxMovies.ItemsSource = DataRepo.OutOfStock;
         }
+
+        private void BtnRegister_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new AddCustomer());
+        }
     }
 }

@@ -18,5 +18,13 @@ namespace RentalStore
         {
 
         }
+
+        public Customer(string firstname, string lastname, string address, string phoneNumber) : this()
+        {
+            Firstname = firstname;
+            Lastname = lastname;
+            Address = address;
+            PhoneNumber = phoneNumber;
+        }
     }
 }

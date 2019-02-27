@@ -14,12 +14,29 @@
         </DataTemplate>
     </Page.Resources>
     <Grid>
-        <ListBox x:Name="lbxCustomers" ItemTemplate="{StaticResource customersTemplate}" HorizontalAlignment="Left" Height="308" Margin="66,63,0,0" VerticalAlignment="Top" Width="297"/>
-        <Button x:Name="btnViewProfile" Content="View Profile" HorizontalAlignment="Left" Margin="417,385,0,0" VerticalAlignment="Top" Width="171" Click="btn_Click" Height="55"/>
-        <Button x:Name="btnCreateLoan" Content="Create Loan" HorizontalAlignment="Left" Margin="224,385,0,0" VerticalAlignment="Top" Width="171" Click="btn_Click" Height="55"/>
-        <Button x:Name="btnViewStock" Content="View Stock" HorizontalAlignment="Left" Margin="27,385,0,0" VerticalAlignment="Top" Width="171" Height="55" Click="btnViewStock_Click"/>
-        <ListBox x:Name="lbxMovies" HorizontalAlignment="Left" Height="308" Margin="417,63,0,0" VerticalAlignment="Top" Width="297"/>
-        <Button x:Name="btnReturn" Content="Return" HorizontalAlignment="Left" Margin="620,385,0,0" VerticalAlignment="Top" Width="171" Height="55" Click="BtnReturn_Click"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="250,10" HorizontalAlignment="Center" Grid.ColumnSpan="2" Grid.RowSpan="3">
+            <TextBlock HorizontalAlignment="Center" Text="Movie Rental Pro V1" FontSize="24"/>
+            <Border HorizontalAlignment="Center" Height="2" Background="Blue" Width="300" CornerRadius="100"></Border>
+        </StackPanel>
+        <ListBox x:Name="lbxCustomers" ItemTemplate="{StaticResource customersTemplate}" Margin="50,20" Grid.Row="1"/>
+        <ListBox x:Name="lbxMovies" Margin="50,20" Grid.Column="1" Grid.Row="1"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+            <Button x:Name="btnRegister" Content="Register Customer" VerticalAlignment="Top" Height="55" Width="150" Click="BtnRegister_Click" Margin="5"/>
+            <Button x:Name="btnViewProfile" Content="View Customer History" VerticalAlignment="Top" Width="150" Click="btn_Click" Height="55" Margin="5"/>
+            <Button x:Name="btnCreateLoan" Content="Create Loan" VerticalAlignment="Top" Width="150" Click="btn_Click" Height="55" Margin="5"/>
+            <Button x:Name="btnViewStock" Content="View Stock" VerticalAlignment="Top" Width="150" Height="55" Click="btnViewStock_Click" Margin="5"/>
+            <Button x:Name="btnReturn" Content="Return Movie" VerticalAlignment="Top" Width="150" Height="55" Click="BtnReturn_Click" Margin="5"/>
+        </StackPanel>
+        
 
     </Grid>
 </Page>
