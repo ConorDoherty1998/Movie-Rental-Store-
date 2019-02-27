@@ -66,3 +66,4 @@ H:\second year\Semester 2\SoftwareEngineering\RentalStore\RentalStore\obj\Debug\
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore.csprojAssemblyReference.cache
 H:\second year\Semester 2\SoftwareEngineering\RentalStore\RentalStore\obj\Debug\AddCustomer.g.cs
 H:\second year\Semester 2\SoftwareEngineering\RentalStore\RentalStore\obj\Debug\AddCustomer.baml
+H:\second year\Semester 2\SoftwareEngineering\RentalStore\RentalStore\obj\Debug\RentalStore.csprojAssemblyReference.cache

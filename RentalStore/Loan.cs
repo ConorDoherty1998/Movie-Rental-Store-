@@ -13,6 +13,19 @@ namespace RentalStore
         public DateTime ReturnDate { get; set; }
         public decimal Price { get; set; }
 
+
+        public string Colour
+        {
+            get
+            {
+                if (this.IsOverdue())
+                    return "Red";
+                else
+                    return "Black";
+            }
+        }
+
+
         public Loan()
         {
 
