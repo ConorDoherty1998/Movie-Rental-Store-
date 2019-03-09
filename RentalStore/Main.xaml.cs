@@ -66,11 +66,14 @@ namespace RentalStore
         private void BtnReturn_Click(object sender, RoutedEventArgs e)
         {
             Loan selectedLoan = lbxMovies.SelectedItem as Loan;
-            DataRepo.UpdateStockAdd(selectedLoan.MyMovie);
-            DataRepo.AllLoans.Remove(selectedLoan);
+            if(selectedLoan != null)
+            {
+                DataRepo.UpdateStockAdd(selectedLoan.MyMovie);
+                DataRepo.AllLoans.Remove(selectedLoan);
 
-            lbxMovies.ItemsSource = null;
-            lbxMovies.ItemsSource = DataRepo.AllLoans;
+                lbxMovies.ItemsSource = null;
+                lbxMovies.ItemsSource = DataRepo.AllLoans;
+            }
         }
 
         private void BtnRegister_Click(object sender, RoutedEventArgs e)

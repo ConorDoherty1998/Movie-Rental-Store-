@@ -26,9 +26,22 @@ namespace RentalStore
         }
 
         private void BtnRegister_Click(object sender, RoutedEventArgs e)
-        {            
-            DataRepo.CurrentCustomers.Add(new Customer(txtbxFirstName.Text, txtbxSurname.Text, txtbxPhoneNumber.Text, txtbxEmailAddress.Text));
-            this.NavigationService.Navigate(new Main());
+        {
+            if (string.IsNullOrEmpty(txtbxFirstName.Text))
+                MessageBox.Show("You must fill in a first name to proceed");
+            else
+            {
+                DataRepo.CurrentCustomers.Add(new Customer(txtbxFirstName.Text, txtbxSurname.Text, txtbxPhoneNumber.Text, txtbxEmailAddress.Text));
+                this.NavigationService.Navigate(new Main());
+            }
+        }
+
+        private void BtnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
         }
     }
 }
