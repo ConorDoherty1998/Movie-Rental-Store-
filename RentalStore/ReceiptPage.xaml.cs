@@ -55,7 +55,8 @@ namespace RentalStore
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             lbxLoans.ItemsSource = TempLoans;
-            tblkTotalCost.Text = TotalCost().ToString();
+            tblkTotal.Text = $"Total Cost: €{TotalCost().ToString()}";
+
         }
 
         private decimal TotalCost()

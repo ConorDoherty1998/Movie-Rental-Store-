@@ -41,7 +41,9 @@
             <Button x:Name="btnCreateLoan" Content="Create Loan" VerticalAlignment="Top" Width="150" Click="btn_Click" Height="55" Margin="5"/>
             <Button x:Name="btnReturn" Content="Return Movie" VerticalAlignment="Top" Width="150" Height="55" Click="BtnReturn_Click" Margin="5"/>
         </StackPanel>
-        
+        <Label Content="Customers" FontSize="16" HorizontalAlignment="Left" Margin="165,47,0,0" VerticalAlignment="Top" Height="40" Grid.RowSpan="2"/>
+        <Label Content="Movies Out" FontSize="16" Grid.Column="1" HorizontalAlignment="Left" Margin="155,47,0,0" VerticalAlignment="Top" Height="40" Grid.RowSpan="2" RenderTransformOrigin="0.498,0.225"/>
+
 
     </Grid>
 </Page>
