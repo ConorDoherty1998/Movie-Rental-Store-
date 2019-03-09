@@ -30,15 +30,21 @@ namespace RentalStore
 
         public static List<Movie> GetMovies()
         {
-            Movie m1 = new Movie() { Title = "Terminator", PricePerDay = 5 };
-            Movie m2 = new Movie() { Title = "Avatar", PricePerDay = 3 };
-            Movie m3 = new Movie() { Title = "Trainspotting", PricePerDay = 2 };
+            Movie m1 = new Movie() { Title = "Terminator", PricePerDay = 5, Copies = 3, AgeRating = 18,
+            Description = "A seemingly indestructible android is sent from 2029 to 1984 to assassinate a waitress, whose unborn son will lead humanity in a war against the machines, while a soldier from that war is sent to protect her at all costs."};
+            Movie m2 = new Movie() { Title = "Avatar", PricePerDay = 3, Copies = 5, AgeRating = 12,
+            Description = "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home."};
+            Movie m3 = new Movie() { Title = "Pulp Fiction", PricePerDay = 2, Copies = 2, AgeRating = 18,
+            Description = "The lives of two mob hitmen, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption."};
+            Movie m4 = new Movie() { Title = "The Good, the Bad and the Ugly", PricePerDay = 4, Copies = 3, AgeRating = 15,
+            Description = "A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery."};
 
-            List<Movie> moviesCreated = new List<Movie>
+            List <Movie> moviesCreated = new List<Movie>
             {
                 m1,
                 m2,
-                m3
+                m3,
+                m4
             };
 
             return moviesCreated;
@@ -46,14 +52,39 @@ namespace RentalStore
 
         public static void UpdateStockRemove(Movie yourMovie)
         {
-            OutOfStock.Add(yourMovie);
-            InStock.Remove(yourMovie);
+            Movie tempMovie = new Movie();
+            if(!OutOfStock.Contains(yourMovie))
+            {
+                OutOfStock.Add(yourMovie);
+                yourMovie.Copies--;
+            }
+            else if(yourMovie.Copies == 1)
+            {
+                InStock.Remove(yourMovie);
+                yourMovie.Copies--;
+            }
+            else
+                yourMovie.Copies--;
+            //OutOfStock.Add(yourMovie);
+            //InStock.Remove(yourMovie);
         }
 
         public static void UpdateStockAdd(Movie yourMovie)
         {
-            InStock.Add(yourMovie);
-            OutOfStock.Remove(yourMovie);
+            if (!InStock.Contains(yourMovie))
+            {
+                InStock.Add(yourMovie);
+                yourMovie.Copies++;
+            }
+            else if (yourMovie.Copies == 0)
+            {
+                OutOfStock.Remove(yourMovie);
+                yourMovie.Copies++;
+            }
+            else
+                yourMovie.Copies++;
+            //InStock.Add(yourMovie);
+            //OutOfStock.Remove(yourMovie);
         }
     }
 }

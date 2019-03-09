@@ -57,9 +57,6 @@ namespace RentalStore
                 DataRepo.UpdateStockRemove(selected);
 
                 Loan NewLoan = new Loan(selected, days);
-                NewLoan.DateReturn();
-                NewLoan.Cost();
-
                 DataRepo.AllLoans.Add(NewLoan);
 
                 DataRepo.InStock = TempStock;

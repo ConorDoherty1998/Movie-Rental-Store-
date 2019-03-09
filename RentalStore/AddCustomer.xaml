@@ -15,10 +15,10 @@
         <TextBlock HorizontalAlignment="Left" Margin="281,127,0,0" TextWrapping="Wrap" Text="Surname" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="106,248,0,0" TextWrapping="Wrap" Text="Phone Number" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="281,248,0,0" TextWrapping="Wrap" Text="Email Address" VerticalAlignment="Top"/>
-        <TextBox Name="txtbxFirstName" HorizontalAlignment="Left" Height="23" Margin="106,164,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="txtbxSurname" HorizontalAlignment="Left" Height="23" Margin="281,164,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="txtbxPhoneNumber" HorizontalAlignment="Left" Height="24" Margin="106,282,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="txtbxEmailAddress" HorizontalAlignment="Left" Height="23" Margin="281,282,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtbxFirstName" HorizontalAlignment="Left" Height="23" Margin="106,164,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtbxSurname" HorizontalAlignment="Left" Height="23" Margin="281,164,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtbxPhoneNumber" HorizontalAlignment="Left" Height="24" Margin="106,282,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtbxEmailAddress" HorizontalAlignment="Left" Height="23" Margin="281,282,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="494,206,0,0" VerticalAlignment="Top" Width="169" Height="58" FontSize="20" Click="BtnRegister_Click"/>
     </Grid>
 </Page>

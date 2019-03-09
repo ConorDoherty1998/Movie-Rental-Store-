@@ -39,7 +39,6 @@
             <Button x:Name="btnRegister" Content="Register Customer" VerticalAlignment="Top" Height="55" Width="150" Click="BtnRegister_Click" Margin="5"/>
             <Button x:Name="btnViewProfile" Content="View Customer History" VerticalAlignment="Top" Width="150" Click="btn_Click" Height="55" Margin="5"/>
             <Button x:Name="btnCreateLoan" Content="Create Loan" VerticalAlignment="Top" Width="150" Click="btn_Click" Height="55" Margin="5"/>
-            <Button x:Name="btnViewStock" Content="View Stock" VerticalAlignment="Top" Width="150" Height="55" Click="btnViewStock_Click" Margin="5"/>
             <Button x:Name="btnReturn" Content="Return Movie" VerticalAlignment="Top" Width="150" Height="55" Click="BtnReturn_Click" Margin="5"/>
         </StackPanel>
         

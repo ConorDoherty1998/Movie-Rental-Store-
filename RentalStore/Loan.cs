@@ -32,6 +32,8 @@ namespace RentalStore
         {
             MyMovie = myMovie;
             Days = days;
+            DateReturn();
+            Cost();
         }
 
         public void DateReturn()
