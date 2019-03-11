@@ -38,7 +38,7 @@ namespace RentalStore
             this.NavigationService.Navigate(new LoanPage());
         }
 
-        // loas and total cost added to a receipt and that receipt is then added to the current selected customer
+        // loans and total cost added to a receipt and that receipt is then added to the current selected customer
         private void BtnFinish_Click(object sender, RoutedEventArgs e)
         {
             foreach (Loan loan in TempLoans)
