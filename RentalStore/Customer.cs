@@ -8,6 +8,7 @@ namespace RentalStore
 {
     public class Customer
     {
+        //0 or more receipts per customer
         public List<Receipt> MyReceipts { get; set; } = new List<Receipt>();
         public string Firstname { get; set; }
         public string Lastname { get; set; }

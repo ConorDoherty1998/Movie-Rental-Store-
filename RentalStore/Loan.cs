@@ -13,6 +13,7 @@ namespace RentalStore
         public DateTime ReturnDate { get; set; }
         public decimal Price { get; set; }
 
+        //once a movie is overdue the colour will be red
         public string Colour
         {
             get
@@ -36,11 +37,13 @@ namespace RentalStore
             Cost();
         }
 
+        //get a return date based upon how many days the movie is rented for
         public void DateReturn()
         {
             ReturnDate = DateTime.Now.AddDays(Days);
         }
 
+        //if the movie is overdue the method will return true
         public bool IsOverdue()
         {
             DateTime example = new DateTime(2019, 12, 01);
@@ -52,6 +55,7 @@ namespace RentalStore
                 return false;
         }
 
+        //getting the cost of each loan for how many days the movie is rented out for
         public void Cost()
         {
             decimal price = 0;

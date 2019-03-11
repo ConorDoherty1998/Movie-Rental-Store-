@@ -26,6 +26,8 @@ namespace RentalStore
 
             Loaded += Window_Loaded;
         }
+
+        //adding sample data into the instock list and current customers list
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             DataRepo.InStock = DataRepo.GetMovies();

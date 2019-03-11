@@ -24,8 +24,6 @@ namespace RentalStore
         public ViewProfilePage()
         {
             InitializeComponent();
-            //Console.WriteLine(Main.customerSelected.Firstname);
-            //Console.WriteLine(Main.customerSelected.MyReceipts[0].MyLoans[0]);
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -42,6 +40,7 @@ namespace RentalStore
             }
         }
 
+        //displays the loans based on which receipt is selected
         private void LbxReceipts_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Receipt selected = lbxReceipts.SelectedItem as Receipt;           

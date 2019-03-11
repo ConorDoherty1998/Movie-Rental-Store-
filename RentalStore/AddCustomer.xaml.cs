@@ -25,8 +25,10 @@ namespace RentalStore
             InitializeComponent();
         }
 
+        //when the button is clicked a customer is added to the customer list
         private void BtnRegister_Click(object sender, RoutedEventArgs e)
         {
+            //only if firstname is filled in you can add customer
             if (string.IsNullOrEmpty(txtbxFirstName.Text))
                 MessageBox.Show("You must fill in a first name to proceed");
             else
@@ -36,6 +38,7 @@ namespace RentalStore
             }
         }
 
+        //when the cancel button is clicked send back to home page
         private void BtnCancel_Click(object sender, RoutedEventArgs e)
         {
             if (this.NavigationService.CanGoBack)

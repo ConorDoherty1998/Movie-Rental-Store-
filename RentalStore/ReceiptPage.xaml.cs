@@ -20,8 +20,8 @@ namespace RentalStore
     /// </summary>
     public partial class ReceiptPage : Page
     {
-        public static List<Loan> TempLoans = new List<Loan>();
-        private List<Loan> LoansAddedToReceipt = new List<Loan>();
+        public static List<Loan> TempLoans = new List<Loan>();// just to display to user from page to page
+        private List<Loan> LoansAddedToReceipt = new List<Loan>(); // the final loans with will be added to the receipt
 
         public ReceiptPage()
         {
@@ -38,6 +38,7 @@ namespace RentalStore
             this.NavigationService.Navigate(new LoanPage());
         }
 
+        // loas and total cost added to a receipt and that receipt is then added to the current selected customer
         private void BtnFinish_Click(object sender, RoutedEventArgs e)
         {
             foreach (Loan loan in TempLoans)
@@ -59,6 +60,7 @@ namespace RentalStore
 
         }
 
+        //getting total cost of all loans whenever the page loads
         private decimal TotalCost()
         {
             decimal total = 0;

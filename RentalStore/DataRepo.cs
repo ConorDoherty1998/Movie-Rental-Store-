@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace RentalStore
 {
+    //acts as a database
     public static class DataRepo
     {
         public static List<Movie> InStock { get; set; } = new List<Movie>();
         public static List<Movie> OutOfStock { get; set; } = new List<Movie>();
         public static List<Loan> AllLoans { get; set; } = new List<Loan>();
         public static List<Customer> CurrentCustomers { get; set; } = new List<Customer>();
+
+        //sample customers
         public static List<Customer> GetCustomers()
         {
             Customer c1 = new Customer() { Firstname = "Conor" };
@@ -28,6 +31,7 @@ namespace RentalStore
             return customersCreated;
         }
 
+        //sample movies
         public static List<Movie> GetMovies()
         {
             Movie m1 = new Movie() { Title = "Terminator", PricePerDay = 5, Copies = 3, AgeRating = 18,
@@ -50,25 +54,25 @@ namespace RentalStore
             return moviesCreated;
         }
 
+        //removing stock from the instock list any time a loan is made
         public static void UpdateStockRemove(Movie yourMovie)
         {
-            Movie tempMovie = new Movie();
+            //if the list out of stock does not contain your movie then add it and take one copie away from stock
             if(!OutOfStock.Contains(yourMovie))
             {
                 OutOfStock.Add(yourMovie);
                 yourMovie.Copies--;
             }
-            else if(yourMovie.Copies == 1)
+            else if(yourMovie.Copies == 1) // once your copies is once remove the movie from instock and take a copie away
             {
                 InStock.Remove(yourMovie);
                 yourMovie.Copies--;
             }
-            else
+            else //take a copy away any time a loan is added
                 yourMovie.Copies--;
-            //OutOfStock.Add(yourMovie);
-            //InStock.Remove(yourMovie);
         }
 
+        //adding stock to the instock list any time a movie is returned
         public static void UpdateStockAdd(Movie yourMovie)
         {
             if (!InStock.Contains(yourMovie))
@@ -83,8 +87,6 @@ namespace RentalStore
             }
             else
                 yourMovie.Copies++;
-            //InStock.Add(yourMovie);
-            //OutOfStock.Remove(yourMovie);
         }
     }
 }

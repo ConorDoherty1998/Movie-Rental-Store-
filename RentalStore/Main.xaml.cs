@@ -20,7 +20,7 @@ namespace RentalStore
     /// </summary>
     public partial class Main : Page
     {
-        public static Customer SelectedCustomer = new Customer();
+        public static Customer SelectedCustomer = new Customer();// customer is selected throughout the program
 
         public Main()
         {
@@ -33,6 +33,7 @@ namespace RentalStore
             lbxMovies.ItemsSource = DataRepo.AllLoans;
         }
 
+        //once a cutomer is selected you can access and ViewProfile Page and you can also access the Loan Page if theres enough movies in stock
         private void btn_Click(object sender, RoutedEventArgs e)
         {
             SelectedCustomer = lbxCustomers.SelectedItem as Customer;
@@ -58,11 +59,7 @@ namespace RentalStore
                 MessageBox.Show("You must select a customer");
         }
 
-        private void btnViewStock_Click(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.Navigate(new ViewStockPage());
-        }
-
+        //when you select a movie that movie can be returned to the instock list
         private void BtnReturn_Click(object sender, RoutedEventArgs e)
         {
             Loan selectedLoan = lbxMovies.SelectedItem as Loan;

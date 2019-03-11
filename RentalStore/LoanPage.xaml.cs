@@ -20,14 +20,15 @@ namespace RentalStore
     /// </summary>
     public partial class LoanPage : Page
     {
-        List<Movie> TempStock = new List<Movie>();
-        private int days = 0;
+        List<Movie> TempStock = new List<Movie>();//tempstock list made so no permanent changes are made to the instock list until create button is clicked
+        private int days = 0;//displays how many days the movie is rented for
 
         public LoanPage()
         {
             InitializeComponent();
         }
 
+        //setting the lbx source and the tblkDays source
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             TempStock = DataRepo.InStock;
@@ -41,6 +42,8 @@ namespace RentalStore
             days++;
             tblkDays.Text = days.ToString();
         }
+
+        //you cannot decrease below zero days
         private void btnDecrease_Click(object sender, RoutedEventArgs e)
         {
             if (days != 0)
@@ -49,6 +52,8 @@ namespace RentalStore
                 tblkDays.Text = days.ToString();
             }
         }
+
+        //when the button is clicked stock is changed and a new loan is created. The new loan is passed through to the ReceiptPage.
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
             Movie selected = lbxStock.SelectedItem as Movie;
@@ -67,6 +72,7 @@ namespace RentalStore
                 MessageBox.Show("You have to select at least one movie and rent for at least one day");
         }
 
+        //the description changes based on whatever movie is selected. This is done by changing the Data Context.
         private void lbxStock_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Movie selected = lbxStock.SelectedItem as Movie;
