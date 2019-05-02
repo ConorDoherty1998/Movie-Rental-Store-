@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialDesignThemes.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace RentalStore
         public AddCustomer()
         {
             InitializeComponent();
+            lbxCustomers.ItemsSource = DataRepo.CurrentCustomers;
         }
 
         //when the button is clicked a customer is added to the customer list
@@ -34,7 +36,14 @@ namespace RentalStore
             else
             {
                 DataRepo.CurrentCustomers.Add(new Customer(txtbxFirstName.Text, txtbxSurname.Text, txtbxPhoneNumber.Text, txtbxEmailAddress.Text));
-                this.NavigationService.Navigate(new Main());
+                //var myMessageQueue = new SnackbarMessageQueue(TimeSpan.FromMilliseconds(8000));
+                //MySnackbar.MessageQueue = myMessageQueue;
+
+                //var messageQue = MySnackbar.MessageQueue;
+                //var message = "Created Customer " + txtbxFirstName.Text;
+
+                //Task.Factory.StartNew(() => messageQue.Enqueue(message));
+                Refresh();
             }
         }
 
@@ -45,6 +54,24 @@ namespace RentalStore
             {
                 this.NavigationService.GoBack();
             }
+        }
+
+        private void BtnReturn_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Main());
+        }
+
+        private void BtnDeleteCustomer_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            Customer temp = button.DataContext as Customer;
+            DataRepo.CurrentCustomers.Remove(temp);
+            Refresh();
+        }
+        private void Refresh()
+        {
+            lbxCustomers.ItemsSource = null;
+            lbxCustomers.ItemsSource = DataRepo.CurrentCustomers;
         }
     }
 }

@@ -66,3 +66,37 @@ H:\second year\Semester 2\SoftwareEngineering\RentalStore\RentalStore\obj\Debug\
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\AddCustomer.g.cs
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\AddCustomer.baml
 C:\Users\brian\OneDrive\Documents\Code\RentalStore\RentalStore\obj\Debug\RentalStore.csprojAssemblyReference.cache
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\RentalStore.csprojAssemblyReference.cache
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\AddCustomer.g.cs
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\LoanPage.g.cs
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\Main.g.cs
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\MainWindow.g.cs
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\ReceiptPage.g.cs
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\ViewProfilePage.g.cs
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\App.g.cs
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\RentalStore_MarkupCompile.cache
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\RentalStore_MarkupCompile.lref
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\RentalStore.exe
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\RentalStore.pdb
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\bin\Debug\RentalStore.exe.config
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\bin\Debug\RentalStore.exe
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\bin\Debug\RentalStore.pdb
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\bin\Debug\MaterialDesignColors.dll
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\App.baml
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\AddCustomer.baml
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\LoanPage.baml
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\Main.baml
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\MainWindow.baml
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\ReceiptPage.baml
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\ViewProfilePage.baml
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\RentalStore.g.resources
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\RentalStore.Properties.Resources.resources
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\RentalStore.csproj.GenerateResource.cache
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\RentalStore.csproj.CoreCompileInputs.cache
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\RentalStore.csproj.CopyComplete
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\Checkout.g.cs
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\Checkout.baml
+C:\Users\Conor\Documents\Software Analysis 2\REAL Assignment 2\RentalStore\RentalStore\obj\Debug\GeneratedInternalTypeHelper.g.cs

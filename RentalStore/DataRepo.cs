@@ -17,15 +17,19 @@ namespace RentalStore
         //sample customers
         public static List<Customer> GetCustomers()
         {
-            Customer c1 = new Customer() { Firstname = "Conor" };
-            Customer c2 = new Customer() { Firstname = "Bob" };
-            Customer c3 = new Customer() { Firstname = "Steve" };
+            Customer c1 = new Customer("Conor", "Doherty", "Cloone, Co. Leitrim", "087 055 1714");
+            Customer c2 = new Customer("Bob", "Marley", "Carrick on Shannon, Co. Leitrim", "087 123 4567");
+            Customer c3 = new Customer("Steve", "Bannon", "Manor, Co. Leitrim", "087 987 6543" ) ;
+            Customer c4 = new Customer("Brian", "Keaveney", "Arigna, Co. Roscommon", "086 666 6666") ;
+            Customer c5 = new Customer("James", "Maguire","Cloone, Co. Leitrim","087 useless" ) ;
 
             List<Customer> customersCreated = new List<Customer>
             {
                 c1,
                 c2,
-                c3
+                c3,
+                c4,
+                c5
             };
 
             return customersCreated;

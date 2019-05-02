@@ -20,12 +20,18 @@ namespace RentalStore
     /// </summary>
     public partial class LoanPage : Page
     {
+        Customer Selected = new Customer();
         List<Movie> TempStock = new List<Movie>();//tempstock list made so no permanent changes are made to the instock list until create button is clicked
         private int days = 0;//displays how many days the movie is rented for
 
         public LoanPage()
         {
             InitializeComponent();
+        }
+
+        public LoanPage(Customer selected) : this()
+        {
+            Selected = selected;
         }
 
         //setting the lbx source and the tblkDays source
@@ -66,7 +72,7 @@ namespace RentalStore
 
                 DataRepo.InStock = TempStock;
 
-                this.NavigationService.Navigate(new ReceiptPage(NewLoan));
+                this.NavigationService.Navigate(new ReceiptPage(NewLoan,Selected));
             }
             else
                 MessageBox.Show("You have to select at least one movie and rent for at least one day");

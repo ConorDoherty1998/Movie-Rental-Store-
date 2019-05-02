@@ -20,16 +20,21 @@ namespace RentalStore
     /// </summary>
     public partial class ViewProfilePage : Page
     {
+        Customer Selected = new Customer();
         List<Loan> temp = new List<Loan>();
         public ViewProfilePage()
         {
             InitializeComponent();
         }
+        public ViewProfilePage(Customer selected) : this()
+        {
+            Selected = selected;
+        }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            lbxReceipts.ItemsSource = Main.SelectedCustomer.MyReceipts;
-            
+            lbxReceipts.ItemsSource = Selected.MyReceipts;
+            txtbxCustomer.Text = $"{Selected.Firstname} {Selected.Lastname}";
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
@@ -46,10 +51,7 @@ namespace RentalStore
             Receipt selected = lbxReceipts.SelectedItem as Receipt;           
 
             if(selected != null)
-            {
                 lbxLoans.ItemsSource = selected.MyLoans;
-                
-            }
         }
     }
 }

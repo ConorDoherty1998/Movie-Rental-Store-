@@ -9,7 +9,7 @@ namespace RentalStore
     public class Loan
     {
         public Movie MyMovie { get; set; }
-        public int Days { get; set; }
+        public int Days { get; set; } = 1;
         public DateTime ReturnDate { get; set; }
         public decimal Price { get; set; }
 

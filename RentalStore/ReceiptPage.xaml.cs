@@ -20,6 +20,7 @@ namespace RentalStore
     /// </summary>
     public partial class ReceiptPage : Page
     {
+        Customer Selected = new Customer();
         public static List<Loan> TempLoans = new List<Loan>();// just to display to user from page to page
         private List<Loan> LoansAddedToReceipt = new List<Loan>(); // the final loans with will be added to the receipt
 
@@ -28,14 +29,16 @@ namespace RentalStore
             InitializeComponent();           
         }
 
-        public ReceiptPage(Loan loan):this()
+        public ReceiptPage(Loan loan, Customer selected):this()
         {
             TempLoans.Add(loan);
+            Selected = selected;
         }
 
         private void BtnAddAnother_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new LoanPage());
+            this.NavigationService.Navigate(new LoanPage(Selected));
         }
 
         // loans and total cost added to a receipt and that receipt is then added to the current selected customer
@@ -46,7 +49,7 @@ namespace RentalStore
                 LoansAddedToReceipt.Add(loan);
             }
             Receipt CustomerReceipt = new Receipt(LoansAddedToReceipt, TotalCost());        
-            Main.SelectedCustomer.MyReceipts.Add(CustomerReceipt);
+            Selected.MyReceipts.Add(CustomerReceipt);
 
             TempLoans.Clear();
 

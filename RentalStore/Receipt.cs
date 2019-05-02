@@ -23,17 +23,5 @@ namespace RentalStore
             TotalCost = totalCost;
             DateIssued = DateTime.Now;
         }
-
-        public override string ToString()
-        {
-            int count = 0;
-
-            foreach (Loan loan in MyLoans)
-            {
-                count++;
-            }
-
-            return $"Loans: {count}, Date Issued: {DateIssued.ToShortDateString()}, Total Cost: {TotalCost}";
-        }
     }
 }

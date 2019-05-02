@@ -20,7 +20,6 @@ namespace RentalStore
     /// </summary>
     public partial class Main : Page
     {
-        public static Customer SelectedCustomer = new Customer();// customer is selected throughout the program
 
         public Main()
         {
@@ -34,48 +33,81 @@ namespace RentalStore
         }
 
         //once a cutomer is selected you can access and ViewProfile Page and you can also access the Loan Page if theres enough movies in stock
-        private void btn_Click(object sender, RoutedEventArgs e)
-        {
-            SelectedCustomer = lbxCustomers.SelectedItem as Customer;
-            Button b = (Button)sender;
+        //private void btn_Click(object sender, RoutedEventArgs e)
+        //{
+        //    SelectedCustomer = lbxCustomers.SelectedItem as Customer;
+        //    Button b = (Button)sender;
 
-            if (SelectedCustomer != null)
-            {
-                if (b.Name == "btnViewProfile")
-                {
-                    this.NavigationService.Navigate(new ViewProfilePage());
-                }
-                else if (b.Name == "btnCreateLoan")
-                {
-                    if(DataRepo.InStock.Count == 0)
-                    {
-                        MessageBox.Show("All movies are out of stock");
-                    }
-                    else
-                        this.NavigationService.Navigate(new LoanPage());
-                }
-            }
-            else
-                MessageBox.Show("You must select a customer");
-        }
+        //    if (SelectedCustomer != null)
+        //    {
+        //        if (b.Name == "btnViewProfile")
+        //        {
+        //            this.NavigationService.Navigate(new ViewProfilePage());
+        //        }
+        //        else if (b.Name == "btnCreateLoan")
+        //        {
+        //            if(DataRepo.InStock.Count == 0)
+        //            {
+        //                MessageBox.Show("All movies are out of stock");
+        //            }
+        //            else
+        //                this.NavigationService.Navigate(new LoanPage());
+        //        }
+        //    }
+        //    else
+        //        MessageBox.Show("You must select a customer");
+        //}
 
         //when you select a movie that movie can be returned to the instock list
         private void BtnReturn_Click(object sender, RoutedEventArgs e)
         {
-            Loan selectedLoan = lbxMovies.SelectedItem as Loan;
-            if(selectedLoan != null)
-            {
-                DataRepo.UpdateStockAdd(selectedLoan.MyMovie);
-                DataRepo.AllLoans.Remove(selectedLoan);
+            Button button = sender as Button;
+            Loan selected = button.DataContext as Loan;
+            DataRepo.UpdateStockAdd(selected.MyMovie);
+            DataRepo.AllLoans.Remove(selected);
 
-                lbxMovies.ItemsSource = null;
-                lbxMovies.ItemsSource = DataRepo.AllLoans;
-            }
+            lbxMovies.ItemsSource = null;
+            lbxMovies.ItemsSource = DataRepo.AllLoans;
+        }
+
+        private void BtnLoanMovie_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            Customer selected = button.DataContext as Customer;
+            this.NavigationService.Navigate(new Checkout(selected));
+            //if (DataRepo.InStock.Count == 0)
+            //    MessageBox.Show("All movies are out of stock");
+            //else
+            //    this.NavigationService.Navigate(new LoanPage(selected));
+        }
+
+        private void BtnCustomerInfo_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            Customer selected = button.DataContext as Customer;
+            this.NavigationService.Navigate(new ViewProfilePage(selected));
         }
 
         private void BtnRegister_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new AddCustomer());
+        }
+
+        private void TxtbxSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string filter = txtbxSearch.Text.ToLower();
+            if (filter != "search...")
+            {
+                lbxCustomers.ItemsSource = null;
+                lbxCustomers.ItemsSource = DataRepo.CurrentCustomers.Where(x => x.FullName.ToLower().Contains(filter));
+            }
+            
+        }
+
+        private void BtnClearSearch_Click(object sender, RoutedEventArgs e)
+        {
+            lbxCustomers.Focus();
+            lbxCustomers.ItemsSource = DataRepo.CurrentCustomers;
         }
     }
 }
